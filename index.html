@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zing MP3</title>
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-5.15.4-web/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script src="../assets/js/app.js"></script>
+</head>
+<body>
+    
+    <div class="app">
+        <!-- Left navigation -->
+        <div class="navigation">
+            <div class="navigation_header">
+                <img class="navigation_header-img" src="./assets/img/logo-mp3.svg" alt="">
+            </div>
+    
+            <div class="navigation-category">
+                <ul class="navigation_category-list">
+                    <li class="navigation_category-item">
+                        <i class="fab fa-itunes navigation_category-icon"></i>
+                        Cá nhân
+                    </li>
+                    <li class="navigation_category-item">
+                        <i class="fas fa-record-vinyl navigation_category-icon"></i>
+                        Khám phá
+                    </li>
+                    <li class="navigation_category-item">
+                        <i class="fab fa-facebook-messenger navigation_category-icon"></i>
+                        #zingchart
+                    </li>
+                    <li class="navigation_category-item">
+                        <i class="fas fa-radiation-alt navigation_category-icon"></i>
+                        Radio
+                    </li>
+                    <li class="navigation_category-item">
+                        <i class="fas fa-rss navigation_category-icon"></i>
+                        Theo dõi
+                    </li>
+                </ul>
+                <div class="slider-border"></div>
+                <ul class="navigation_category-list">
+                    <li class="navigation_category-item">
+                        <i class="fas fa-music navigation_category-icon"></i>
+                        Nhạc mới
+                    </li>
+                    <li class="navigation_category-item">
+                        <i class="fas fa-icons navigation_category-icon"></i>
+                        Thể loại
+                    </li>
+                    <li class="navigation_category-item">
+                        <i class="fas fa-star navigation_category-icon"></i>
+                        Top 100
+                    </li>
+                    <li class="navigation_category-item">
+                        <i class="fab fa-youtube navigation_category-icon"></i>
+                        Music video
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+        <!-- Container -->
+        <div class="container">
+            <div class="container_header">
+
+                <div class="container_header-btn-direction">
+                    <div class="container_header-btn-direction-item">
+                        <i class="fas fa-arrow-left container_header-btn-direction-icon"></i>
+                    </div>
+                    <div class="container_header-btn-direction-item">
+                        <i class="fas fa-arrow-right container_header-btn-direction-icon"></i>
+                    </div>
+                </div>
+
+                <div class="container_header-search">
+                    <div class="container_header-search-content">
+                        <i class="fas fa-search container_header-search-icon"></i>
+                        <input type="text" placeholder="Nhập tên bài hát, Nghệ sĩ hoặc MV..."
+                            class="container_header-search-input">
+                    </div>
+                </div>
+
+                <div class="container_header-user">
+                    <li class="container_header-user-item">
+                        <div class="container_header-user-item-wrap" onclick="modalBlock()">
+                            <i class="fas fa-tshirt container_header-user-icon"></i>
+    
+                        </div>
+                    </li>
+                    <li class="container_header-user-item">
+                        <div class="container_header-user-item-wrap">
+                            <i class="fas fa-upload container_header-user-icon"></i>
+                        </div>
+                    </li>
+                    <li class="container_header-user-item">
+                        <div class="container_header-user-item-wrap">
+                            <i class="fas fa-cog container_header-user-icon"></i>
+    
+                        </div>
+                    </li>
+                    <li class="container_header-user-item">
+                        <div class="container_header-user-item-wrap">
+                            <img class="container_header-user-img" src="./assets/img/user.jpg" alt="">
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div class="container_profile">
+                <div class="container_profile-user">
+                    <div class="container_profile-user-avatar">
+                        <img src="./assets/img/user.jpg" alt="" class="container_profile-user-img">
+                    </div>
+                    <div class="container_profile-user-name">
+                        <span class="container_profile-user-text">Quang Nguyen</span>
+                    </div>
+                    <div class="container_profile-nav">
+                        <div class="container_profile-nav-buyVip">
+                            <button class="container_profile-nav-buyVip-btn container_profile-nav-btn" >MUA VIP NGAY</button>
+                        </div>
+                        <div class="container_profile-nav-addVip">
+                            <button class="container_profile-nav-addVip-btn container_profile-nav-btn" >NHẬP CODE VIP</button>
+                        </div>
+                        <div class="container_profile-nav-sub">
+                            <button class="container_profile-nav-sub-btn container_profile-nav-btn" ><i class="fas fa-ellipsis-h"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container_player">
+                <div class="container_player-header">
+                    <div class="container_player-header-item active">
+                        <span>
+                            TỔNG QUAN
+                        </span>                      
+                    </div>
+                    <div class="container_player-header-item">
+                        <span>
+                            BÀI HÁT
+                        </span>                
+                    </div>
+                    <div class="container_player-header-item">
+                        <span>
+                            PLAYSLIST
+                        </span>           
+                    </div>
+                    <div class="container_player-header-item">
+                        <span>
+                            NGHỆ SĨ
+                        </span>        
+                    </div>
+                    <div class="container_player-header-item">
+                        <span>
+                            ALBUM
+                        </span>                    
+                    </div>
+                    <div class="container_player-header-item">
+                        <span>
+                            MV
+                        </span>           
+                    </div>
+                    <div class="container_player-header-item">
+                        <span>
+                            TẢI LÊN
+                        </span>                 
+                    </div>
+                </div>
+                <div class="container_player-slider">
+                    <div class="container_player-slider-sings">
+                        <span class="container_player-slider-sings-text">
+                            BÀI HÁT
+                        </span>
+                        <i class="fas fa-angle-right container_player-slider-sings-icon"></i>
+                    </div>
+                    <div class="container_player-slider-btn">
+                        <div class="container_player-slider-btn-all">
+                            <button class="container_player-slider-btn-upload container_player-slider-button">
+                                <i class="fas fa-upload"></i>
+                                <span>TẢI LÊN</span>
+                            </button>
+                        </div>
+                        <div class="container_player-slider-btn-all">
+                            <button class="container_player-slider-btn-allList container_player-slider-button">
+                                <i class="fas fa-play"></i>
+                                <span>PHÁT TẤT CẢ</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="container_player-music">
+                    <div class="container_player-music-avt">
+                        <img src="./assets/img/demo.jpg" alt="" class="container_player-music-avt-img">
+                    </div>
+                    <div class="container_player-music-list">
+                        <!-- <div class="container_player-music-item itemActive">
+                            <div class="container_player-music-item-miniAvt">
+                                <img src="./assets/img/demo.jpg" alt="" class="container_player-music-item-img">
+                                <div class="container_player-music-item-play">
+                                    <div class="container_player-music-item-img playMusic">
+                                        <i class="fas fa-play playMusic-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="container_player-music-item-name">
+                                <div class="container_player-music-item-name-song">
+                                    <span>Covid nhanh đi đi</span>
+                                </div>
+                                <div class="container_player-music-item-name-singer">
+                                    <span>Masew</span>
+                                </div>
+                            </div>
+                            <div class="container_player-music-item-time">
+                                <span>03:22</span>
+                            </div>
+                            <div class="container_player-music-item-nav">
+                                <i class="fas fa-microphone container_player-music-item-nav-icon"></i>
+                                <i class="fas fa-heart container_player-music-item-nav-icon"></i>
+                                <i class="fas fa-ellipsis-h container_player-music-item-nav-icon"></i>
+                            </div>
+                        </div> -->
+
+                        
+
+
+
+
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="container_playlist">
+                
+            </div>
+        </div>
+    
+        <div class="footer">
+            <div class="footer-infor">
+                <div class="footer-infor-avt">
+                    <img src="./assets/img/demo.jpg" alt="" class="footer-infor-avt-img">
+                </div>
+                <div class="footer-infor-name">
+                    <div class="footer-infor-name-sing">
+                        <span>Covi nhanh đi đi</span>
+                    </div>
+                    <div class="footer-infor-name-singer">
+                        <span>Masew</span>
+                    </div>
+                </div>
+                <div class="footer-infor-nav">
+                    <i class="fas fa-heart footer-infor-nav-icon"></i>
+                    <i class="fas fa-ellipsis-h footer-infor-nav-icon"></i>
+                </div>
+            </div>
+            <div class="footer-control player">
+                <audio class="audio" src=""></audio>
+                <div class="footer-control-btn">
+                    <i class="fas fa-random footer-control-btn-icon"></i>
+                    <i class="fas fa-step-backward footer-control-btn-icon"></i>
+                    <i class="fas fa-play icon-play footer-control-btn-icon footer-control-btn-icon-play"></i>
+                    <i class="fas fa-pause icon-pause footer-control-btn-icon footer-control-btn-icon-play"></i>
+                    <i class="fas fa-step-forward footer-control-btn-icon"></i>
+                    <i class="fas fa-undo-alt footer-control-btn-icon"></i>
+                </div>
+                <div class="footer-control-progress">
+                    <span class="timeUpdate">00:00</span>
+                    <input id="progress" class="progress footer-control-progress-time" type="range" value="0" step="1" min="0" max="100">
+                    <span class="timeOfSong">00:00</span>
+                </div>
+                
+            </div>
+            <div class="footer-nav">
+                <i class="fab fa-youtube footer-nav-item"></i>
+                <i class="fas fa-microphone footer-nav-item"></i>
+                <i class="fas fa-volume-up footer-nav-item btn-volume"></i>  
+                <input id="progress" class="progress-mute progress-mute-none" type="range" value="0" step="1" min="0" max="100">
+                <input id="progress" class="progress-volumn" type="range" value="100" step="1" min="0" max="100">
+                <i class="fas fa-expand-alt footer-nav-item sub-class"></i>
+                <i class="fas fa-sliders-h footer-nav-item sub-class"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-theme">
+        <div class="container_header-user_theme">
+            <div class="container_header-user_theme-header">
+                <h1 class="h1">Giao diện</h1>
+                <i class="fas fa-times container_header-user_theme-header-close" onclick="closeModal()"></i>
+            </div>
+            <!-- Giao dien 1 -->
+            <div class="container_header-user_theme-type">
+                <h1>Dynamic</h1>
+                <div class="container_header-user_theme-item">
+                    <div class="container_header-user_theme-item-img">
+                        <div class="hover-img">
+                            <img class="container_header-user_theme-img" src="./assets/img/dynamic1.jpg" alt="">
+
+                        </div>
+                        <div class="hover-img-sub">
+                            <div class="hover-img-sub-btn hover-img-sub-apply">
+                                <span>ÁP DỤNG</span>
+                            </div>
+                            <div class="hover-img-sub-btn hover-img-sub-try">
+                                <span>XEM TRƯỚC</span>
+                            </div>
+                        </div>
+                        <p>Sáng tối</p>
+                    </div>                    
+                    <div class="container_header-user_theme-item-img">
+                        <div class="hover-img">
+                            <img class="container_header-user_theme-img" src="./assets/img/dynamic2.png" alt="">
+                        </div>
+                        <div class="hover-img-sub">
+                            <div class="hover-img-sub-btn hover-img-sub-apply">
+                                <span>ÁP DỤNG</span>
+                            </div>
+                            <div class="hover-img-sub-btn hover-img-sub-try">
+                                <span>XEM TRƯỚC</span>
+                            </div>
+                        </div>
+                        <p>London</p>
+                    </div>
+                </div>                                
+            </div>
+            
+            <!-- Giao dien 2 -->
+            <div class="container_header-user_theme-type">
+                <h1>Chủ đề</h1>
+                <div class="container_header-user_theme-item">
+                    <div class="container_header-user_theme-item-img">
+                        <div class="hover-img">
+                            <img class="container_header-user_theme-img" src="./assets/img/zma.jpg" alt="">
+                        </div>
+                        <div class="hover-img-sub">
+                            <div class="hover-img-sub-btn hover-img-sub-apply">
+                                <span>ÁP DỤNG</span>
+                            </div>
+                            <div class="hover-img-sub-btn hover-img-sub-try">
+                                <span>XEM TRƯỚC</span>
+                            </div>
+                        </div>
+                        <p>Zing Music Awards</p>
+                    </div>
+                    <div class="container_header-user_theme-item-img">
+                        <div class="hover-img">
+                            <img class="container_header-user_theme-img" src="./assets/img/eiffel.jpg" alt="">
+                        </div>
+                        <div class="hover-img-sub">
+                            <div class="hover-img-sub-btn hover-img-sub-apply">
+                                <span>ÁP DỤNG</span>
+                            </div>
+                            <div class="hover-img-sub-btn hover-img-sub-try">
+                                <span>XEM TRƯỚC</span>
+                            </div>
+                        </div>
+                        <p>Tháp Eiffel</p>
+                    </div>           
+                </div>      
+                                          
+            </div>     
+
+            <!-- Giao dien 3 -->
+            <div class="container_header-user_theme-type">
+                <h1>Nghệ sĩ</h1>
+                <div class="container_header-user_theme-item">
+                    <div class="container_header-user_theme-item-img">
+                        <div class="hover-img">
+                            <img class="container_header-user_theme-img" src="./assets/img/jack.jpg" alt="">
+                        </div>
+                        <div class="hover-img-sub">
+                            <div class="hover-img-sub-btn hover-img-sub-apply">
+                                <span>ÁP DỤNG</span>
+                            </div>
+                            <div class="hover-img-sub-btn hover-img-sub-try">
+                                <span>XEM TRƯỚC</span>
+                            </div>
+                        </div>
+                        <p>Jack</p>
+                    </div>
+                    <div class="container_header-user_theme-item-img">
+                        <div class="hover-img">
+                            <img class="container_header-user_theme-img" src="./assets/img/iu.jpg" alt="">
+                        </div>
+                        <div class="hover-img-sub">
+                            <div class="hover-img-sub-btn hover-img-sub-apply">
+                                <span>ÁP DỤNG</span>
+                            </div>
+                            <div class="hover-img-sub-btn hover-img-sub-try">
+                                <span>XEM TRƯỚC</span>
+                            </div>
+                        </div>
+                        <p>IU</p>
+                    </div>
+                    <div class="container_header-user_theme-item-img">
+                        <div class="hover-img">
+                            <img class="container_header-user_theme-img" src="./assets/img/jennie.jpg" alt="">
+                        </div>
+                        <div class="hover-img-sub">
+                            <div class="hover-img-sub-btn hover-img-sub-apply">
+                                <span>ÁP DỤNG</span>
+                            </div>
+                            <div class="hover-img-sub-btn hover-img-sub-try">
+                                <span>XEM TRƯỚC</span>
+                            </div>
+                        </div>
+                        <p>Jennie</p>
+                    </div>
+                    <div class="container_header-user_theme-item-img">
+                        <div class="hover-img">
+                            <img class="container_header-user_theme-img" src="./assets/img/ji-chang-wook.jpg" alt="">
+                        </div>
+                        <div class="hover-img-sub">
+                            <div class="hover-img-sub-btn hover-img-sub-apply">
+                                <span>ÁP DỤNG</span>
+                            </div>
+                            <div class="hover-img-sub-btn hover-img-sub-try">
+                                <span>XEM TRƯỚC</span>
+                            </div>
+                        </div>
+                        <p>Kim Chang Wook</p>
+                    </div>
+                    <div class="container_header-user_theme-item-img">
+                        <div class="hover-img">
+                            <img class="container_header-user_theme-img" src="./assets/img/lisa.jpg" alt="">
+                        </div>
+                        <div class="hover-img-sub">
+                            <div class="hover-img-sub-btn hover-img-sub-apply">
+                                <span>ÁP DỤNG</span>
+                            </div>
+                            <div class="hover-img-sub-btn hover-img-sub-try">
+                                <span>XEM TRƯỚC</span>
+                            </div>
+                        </div>
+                        <p>Lisa</p>
+                    </div>
+                    <div class="container_header-user_theme-item-img">
+                        <div class="hover-img">
+                            <img class="container_header-user_theme-img" src="./assets/img/jisoo.jpg" alt="">
+                        </div>
+                        <div class="hover-img-sub">
+                            <div class="hover-img-sub-btn hover-img-sub-apply">
+                                <span>ÁP DỤNG</span>
+                            </div>
+                            <div class="hover-img-sub-btn hover-img-sub-try">
+                                <span>XEM TRƯỚC</span>
+                            </div>
+                        </div>
+                        <p>jisoo</p>
+                    </div>
+                </div>                                
+            </div>       
+            
+            
+
+        </div>
+    </div>
+    
+    <script>
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+
+        const avtFooter = $('.footer-infor-avt-img');
+        const avtContainer = $('.container_player-music-avt-img');
+        const sing = $('.footer-infor-name-sing span');
+        const singer = $('.footer-infor-name-singer span');
+        const audio = $('.audio');
+        const playBtn = $('.icon-play');
+        const pauseBtn = $('.icon-pause');
+        const player = $('.player');
+        const playlist = $('.container_player-music-list');
+        const nextBtn = $('.fa-step-forward');
+        const backBtn = $('.fa-step-backward');
+        const lengthSong = $('.timeOfSong');
+        const timeUpdate = $('.timeUpdate');
+        const progress = $('.footer-control-progress-time');
+        const progressVolumn = $('.progress-volumn')
+        const btnReplay = $('.fa-undo-alt');
+        const btnRandom = $('.fa-random');
+        const btnVolumn = $('.btn-volume');
+        const btnMute = $('.progress-mute')
+        const muting = btnVolumn.classList.contains('fa-volume-mute');
+        
+
+        const app = {
+            currentIndex: 0,
+            isPlaying: false,
+            isReplay: false,
+            isRandom: false,
+            isMute: false,
+            songs: [
+                {
+
+                    name: 'Nevada',
+                    singer: 'Victone',
+                    img: './assets/avtSing/nevada.jpg',
+                    path: './assets/playlist/nevada.mp3',
+                    time: '3:28'
+                },                
+                {
+
+                    name: 'Remember Our Summer',
+                    singer: 'FrogMonster',
+                    img: './assets/avtSing/rememberoursummer.webp',
+                    path: './assets/playlist/rememberoursummer.mp3',
+                    time: '2:42'
+
+                },
+                {
+
+                    name: 'Pikasonic',
+                    singer: 'Asuka',
+                    img: './assets/avtSing/pikasonic.webp',
+                    path: './assets/playlist/pikasonic.mp3',
+                    time: '3:57'
+
+                },
+                {
+                    name: 'Unstoppable',
+                    singer: 'Mia',
+                    img: './assets/avtSing/unstoppable.jpg',
+                    path: './assets/playlist/unstoppable.mp3',
+                    time: '3:27'
+                },
+                {
+                    name: 'Way back',
+                    singer: 'Victone',
+                    img: './assets/avtSing/wayback.webp',
+                    path: './assets/playlist/wayback.mp3',
+                    time: '3:28'
+                },
+                {
+                    name: 'Nothing Stopping Me',
+                    singer: 'Victone',
+                    img: './assets/avtSing/NothingStoppingMe.jpg',
+                    path: './assets/playlist/NothingStoppingMe.mp3',
+                    time: '3:44'
+                },
+                {
+                    name: 'Walk Thru Fire',
+                    singer: 'Victone',
+                    img: './assets/avtSing/WalkThruFire.webp',
+                    path: './assets/playlist/WalkThruFire.mp3',
+                    time: '3:14'
+                },
+                {
+                    name: 'Dreams',
+                    singer: 'Lost Sky',
+                    img: './assets/avtSing/dreams.jpg',
+                    path: './assets/playlist/Dreams.mp3',
+                    time: '3:35'
+                },
+                {
+                    name: 'Where we started',
+                    singer: 'Lost Sky',
+                    img: './assets/avtSing/wherewestarted.webp',
+                    path: './assets/playlist/wherewestarted.mp3',
+                    time: '3:42'
+                },
+                {
+                    name: 'Senbonzakura',
+                    singer: 'Lindsey Stirling',
+                    img: './assets/avtSing/senbonzakura.jpg',
+                    path: './assets/playlist/Senbonzakura.mp3',
+                    time: '3:09'
+                },
+                {
+                    name: 'Symphony',
+                    singer: 'Lindsey Stirling',
+                    img: './assets/avtSing/symphony.jpg',
+                    path: './assets/playlist/Symphony.mp3',
+                    time: '3:32'
+                },
+            ],
+
+            render: function() {
+                var htmls = this.songs.map((song, index) => {
+                    return `
+                    <div class="container_player-music-item song ${index === this.currentIndex ? "activeSong" : ""}" data-index="${index}">
+                        <div class="container_player-music-item-miniAvt">
+                            <img src="${song.img}" alt="" class="container_player-music-item-img">
+                            <div class="container_player-music-item-play">
+                                <div class="container_player-music-item-img playMusic">
+                                    <i class="fas fa-play playMusic-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="container_player-music-item-name">
+                            <div class="container_player-music-item-name-song">
+                                <span>${song.name}</span>
+                            </div>
+                            <div class="container_player-music-item-name-singer">
+                                <span>${song.singer}</span>
+                            </div>
+                        </div>
+                        <div class="container_player-music-item-time">
+                            <span>${song.time}</span>
+                        </div>
+                        <div class="container_player-music-item-nav">
+                            <i class="fas fa-microphone container_player-music-item-nav-icon"></i>
+                            <i class="fas fa-heart container_player-music-item-nav-icon"></i>
+                            <i class="fas fa-ellipsis-h container_player-music-item-nav-icon"></i>
+                        </div>
+                    </div>
+                    `
+                })
+                $('.container_player-music-list').innerHTML = htmls.join('');
+            },
+            defineProperties: function() {
+                Object.defineProperty(this, 'currentSong', {
+                    get: function() {
+                        return this.songs[this.currentIndex];
+                    }
+                })
+            },
+
+            handleEvents: function() {
+                //Xử lý khi click Player
+                playBtn.onclick = function() {
+                    if(!app.isPlaying) {
+                        app.isPlaying = true;
+                        audio.play();                                                    
+                    }                    
+                };
+                pauseBtn.onclick = function() {
+                    if(app.isPlaying) {
+                        app.isPlaying = false;
+                        audio.pause();                                           
+                    }                    
+                };
+
+                //Xử lý avt footer quay
+                var avtFooterAnimate = avtFooter.animate({ transform: 'rotate(360deg)' }, {
+                            duration: 10000,
+                            iterations: Infinity,
+                });  
+
+                //Xử lý tự động quay avt khi load trang
+                avtFooterAnimate.pause();
+                
+                //Xử lý quay avt khi phát
+                audio.onplay = function() {
+                    player.classList.add('playing');
+                    app.isPlaying = true;
+                    avtFooterAnimate.play();      
+                }
+                audio.onpause = function() {
+                    app.isplaying = false;
+                    player.classList.remove('playing');
+                    avtFooterAnimate.pause();
+                }
+
+                //Xử lý tự động next bài tiếp theo khi hết
+                audio.onended = function() {                    
+                    app.currentIndex++;
+                    if(app.currentIndex >= app.songs.length) {
+                        app.currentIndex = 0;
+                    }                        
+                    app.loadCurrentSong();
+                    app.render();
+                    audio.play(); 
+                }
+
+                //Xử lý trình chỉ phát 1 bài hát
+                btnReplay.onclick = function() {                   
+                    if(app.isReplay) {
+                        app.isReplay = false;
+                        btnReplay.classList.remove("btn-active");
+                        audio.onended = function() {                    
+                            nextPlaylist();
+                        }
+                    }   
+                    else {
+                        app.isReplay = true;
+                        btnReplay.classList.add("btn-active")
+                        audio.onended = function() {
+                            replayPlaylist();
+                        }   
+                    }                   
+                }
+
+                //Xử lý trình random bài hát
+                btnRandom.onclick = function() {                   
+                    if(app.isRandom) {
+                        app.isRandom = false;
+                        btnRandom.classList.remove("btn-active");
+                        audio.onended = function() {                    
+                            nextPlaylist();
+                        }
+                    }   
+                    else {
+                        app.isRandom = true;
+                        btnRandom.classList.add("btn-active")
+                        audio.onended = function() {
+                            randomPlaylist();
+                        }   
+                    }                   
+                }
+
+                //Random bài hát 
+                function randomPlaylist() {
+                    app.currentIndex = Math.floor(Math.random()*app.songs.length);
+                    if(app.currentIndex >= app.songs.length) {
+                        app.currentIndex = 0;
+                    };
+                    app.loadCurrentSong();
+                    app.render();
+                    audio.play();
+                };
+
+                //Replay bài hát
+                function replayPlaylist() {
+                    app.loadCurrentSong();
+                    app.render();
+                    audio.play();
+                }
+
+                //Next bài hát 
+                function nextPlaylist() {
+                    app.currentIndex++;
+                    if(app.currentIndex >= app.songs.length) {
+                        app.currentIndex = 0;
+                    }                        
+                    app.loadCurrentSong();
+                    app.render();
+                    audio.play(); 
+                }
+
+                //Back bài hát 
+                function backPlaylist() {
+                    app.currentIndex--;                    
+                    if(app.currentIndex < 0) {
+                        app.currentIndex = app.songs.length - 1;
+                    }                        
+                    app.loadCurrentSong();                        
+                    app.render();
+                    audio.play(); 
+                }
+
+                //Xử lý event next bài hát
+                nextBtn.onclick = function() {     
+                    if(app.isRandom) {
+                        randomPlaylist(); 
+                    }     
+                    else {
+                        if (app.isReplay) {
+                            replayPlaylist();
+                        }
+                        else {
+                            nextPlaylist();  
+                        }
+                    }        
+                }               
+
+                //Xử lý event back bài hát
+                backBtn.onclick = function() {  
+                    if(app.isRandom) {
+                        randomPlaylist();                         
+                    }     
+                    else {
+                        if(app.isReplay) {
+                            replayPlaylist();
+                        }
+                        else {
+                            backPlaylist();  
+                        }
+                    }          
+                } 
+
+                //Xử lý sự kiện tua bài hát
+                progress.oninput = function (e) {
+                    audio.pause();
+                    setTimeout(() => {
+                    audio.play();
+                    }, 1);
+                    //Lấy ra thời gian sau khi click tua
+                    const seekTime = e.target.value * (audio.duration / 100);
+                    audio.currentTime = seekTime;
+                };
+
+                var lastValueVolume = 1;
+                //Tăng giảm âm lượng
+                progressVolumn.oninput = function (e) {
+                    if(progressVolumn.value == 0){
+                        btnVolumn.classList.add("fa-volume-mute");
+                        btnVolumn.classList.remove("fa-volume-up");   
+                        audio.volume = 0;
+                    }
+                    else {
+                        btnVolumn.classList.remove("fa-volume-mute");
+                        btnVolumn.classList.add("fa-volume-up"); 
+                        audio.pause();
+                        setTimeout(() => {
+                        audio.play();
+                        }, 100);
+                        const seekVolumn = e.target.value / 100;
+                        audio.volume = seekVolumn;
+                        lastValueVolume = audio.volume;
+                    }
+                }
+
+                //Mute hoặc unmute 
+                btnVolumn.onclick = function (e) {
+                    const volumeCurrent = progressVolumn.value/100;                    
+                    if(app.isMute) {
+                        app.isMute = false;
+                        btnVolumn.classList.remove("fa-volume-mute");
+                        btnVolumn.classList.add("fa-volume-up");    
+                        audio.volume = lastValueVolume;   
+                        progressVolumn.value = lastValueVolume*100;       
+                        //progressVolumn.classList.remove("progress-mute-none");
+                        //btnMute.classList.add("progress-mute-none");
+                    }                     
+                    else {
+                        app.isMute = true;
+                        btnVolumn.classList.add("fa-volume-mute");
+                        btnVolumn.classList.remove("fa-volume-up");    
+                        audio.volume = 0;       
+                        progressVolumn.value = 0;            
+                        //progressVolumn.classList.add("progress-mute-none");
+                        //btnMute.classList.remove("progress-mute-none");
+                    }        
+                       
+                }
+
+                //Xử lý event chọn bài hát
+                playlist.onclick = function(e) {
+                    const songNode = e.target.closest('.song:not(.activeSong)');
+                    if (songNode || e.target.closest('.container_player-music-item-nav')) {
+                        if (songNode) {
+                            app.currentIndex = Number(songNode.getAttribute('data-index'));
+                            app.loadCurrentSong();
+                            app.render();
+                            audio.play();                            
+                        }
+                    }
+                }                    
+                
+                //Update thời gian hiện tại của bài hát
+                audio.ontimeupdate = function() {             
+                    if (audio.duration) {
+                        const progressPercent = Math.floor((audio.currentTime / audio.duration) * 100);
+                        progress.value = progressPercent;
+                        lengthSong.textContent = app.convertTime(audio.duration);                       
+                        timeUpdate.textContent = app.convertTime(audio.currentTime);
+                    }
+                }
+            },
+
+            convertTime: function (time) {
+                var mins = Math.floor(time / 60);
+                var secs = Math.floor(time % 60);
+                if (mins < 10) {
+                    mins = '0' + mins;
+                }
+                if (secs < 10) {
+                    secs = '0' + secs;
+                }
+                return `${mins}:${secs}`;
+            },
+
+            loadCurrentSong: function() {
+                avtContainer.src = this.currentSong.img;
+                avtFooter.src = this.currentSong.img;
+                sing.textContent = this.currentSong.name;
+                singer.textContent = this.currentSong.singer;
+                audio.src = this.currentSong.path;                                           
+            },            
+
+            start: function() {
+                //Định nghĩa các thuộc tính cho Object
+                this.defineProperties();
+
+                //Tải thông tin bài hát đầu tiên vào UI khi chạy ứng dụng
+                this.loadCurrentSong();
+                //Render lại playlist
+                this.render();
+                
+                //Lắng nghe, xử lý các sự kiện
+                this.handleEvents();
+            }
+        };
+
+        app.start();      
+        
+    </script>
+</body>
+</html>
